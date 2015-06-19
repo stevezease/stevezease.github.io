@@ -55,6 +55,24 @@ body {
   display: inline-block;
 }
 
+.box1:hover {
+  background: #D3D3D3;
+}
+
+.box1 {
+  background: #808080;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+  transition-property: background;
+  transition-duration: .5s;
+  transition-timing-function: linear;
+  width: 92px;
+  display: inline-block;
+}
+
 .box2:hover {
   background: #808080;
 }
@@ -114,8 +132,8 @@ button:active {
 -->
 <div class="box2" onclick="javascript:location.href='index.html'">Home</div>
 <div class="box2">Resume</div>
-<div class="box2" float:left;> About Me</div>
-<div class="box2" float:left;> The Mission</div>
+<div class="box1"> About Me</div>
+<div class="box2"> The Mission</div>
 </nav>
 <br></br>
 
