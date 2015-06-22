@@ -138,16 +138,19 @@ button:active {
 </nav>
 <br></br>
 
-<form action="contact.php" method="post">
-    Your name<br>
-    <input type="text" name="cf_name"><br>
-    Your e-mail<br>
-    <input type="text" name="cf_email"><br>
-    Message<br>
-    <textarea name="cf_message"><br>
-    <input type="submit" value="Send">
-    <input type="reset" value="Clear">
-</form>
+<!-- DC Contact Form Start -->
+  <form action="" class="tsc_form_contact_light">
+    <label for="name">Name <span>(required)</span></label>
+    <input type="text" name="name" class="form-input" required />
+    <label for="email">Email <span>(required)</span></label>
+    <input type="email" name="email" class="form-input" required />
+    <label for="subject">Subject <span>(optional)</span></label>
+    <input type="text" name="subject" class="form-input" />
+    <label for="message">Message <span>(required)</span></label>
+    <textarea name="message" class="form-input" required></textarea>
+    <input class="form-btn" type="submit" value="Send Message" />
+  </form>
+<!-- DC Contact Form End -->
 
 
 <body>
