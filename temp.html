@@ -1,12 +1,5 @@
 <html>
 <header><title>Steven's Website</title></header>
-<!-- DC Contact Form CSS -->
-<link type="text/css" rel="stylesheet" href="dreamcodes/contact_forms/css/tsc_form_contact_dark.css" />
-<link type="text/css" rel="stylesheet" href="dreamcodes/contact_forms/css/tsc_form_contact_light.css" />
- 
-<!-- DC Contact Form JS -->
-<script type="text/javascript" src="dreamcodes/contact_forms/js/tsc_form_contact.js"></script>
-
 <head>
 <style>
 #header {
@@ -144,19 +137,21 @@ button:active {
 </nav>
 <br></br>
 
-<!-- DC Contact Form Start -->
-  <form action="" class="tsc_form_contact_light">
-    <label for="name">Name <span>(required)</span></label>
-    <input type="text" name="name" class="form-input" required />
-    <label for="email">Email <span>(required)</span></label>
-    <input type="email" name="email" class="form-input" required />
-    <label for="subject">Subject <span>(optional)</span></label>
-    <input type="text" name="subject" class="form-input" />
-    <label for="message">Message <span>(required)</span></label>
-    <textarea name="message" class="form-input" required></textarea>
-    <input class="form-btn" type="submit" value="Send Message" />
-  </form>
-<!-- DC Contact Form End -->
+<form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+	<div class="row">
+		<label for="name">Your name:</label><br />
+		<input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+	</div>
+	<div class="row">
+		<label for="email">Your email:</label><br />
+		<input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+	</div>
+	<div class="row">
+		<label for="message">Your message:</label><br />
+		<textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+	</div>
+	<input id="submit_button" type="submit" value="Send email" />
+</form>						
 
 
 <body>
