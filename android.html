@@ -147,16 +147,29 @@ button:active {
 </div>
 
 <br>
-</div>
 
+<h3> If the the web has the cookie saved then it will return true else false</h3>
 <button onclick="myFunction()">Try it</button>
 
 <script>
+//variable that checks for saved cookie
+var stored = false; 
+
+/*implement function here that checks for a given cookie/stored data
+if (data is there)
+stored = true;
+else 
+stored = false;
+*/
+//If else that checks
 function myFunction() {
-    alert("I am an alert box!");
+    if (stored)
+    alert("User HAS accessed the mobile app");
+    else
+    alert("User HAS NOT accessed the mobile app");
 }
 </script>
-
+</div>
 </margin>
 
 
