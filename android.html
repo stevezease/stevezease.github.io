@@ -193,7 +193,18 @@ function getCookie(cname) {
 function checkCookie() {
     var user=getCookie("appcookie");
     if (user != "") {
-    	//setCookie("appcookie", "true", 30);
+    	setCookie("appcookie", "chicken", 30);
+        alert(user);
+    } else {
+       if (user != "" && user != null) {
+           setCookie("appcookie", "true", 30);
+       }
+    }
+}
+
+function cookieValue() {
+    var user=getCookie("appcookie");
+    if (user != "") {
         alert(user);
     } else {
        if (user != "" && user != null) {
@@ -209,7 +220,7 @@ function deleteCookie( name ) {
 
 </script>
 
-<button onclick="checkCookie()">Try it!</button>
+<button onclick="cookieValue()">Cookie Value</button>
 <br>
 <br>
 <button type="button" onclick="checkCookie()">User Uses Mobile App</button>
