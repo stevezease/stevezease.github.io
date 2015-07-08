@@ -193,13 +193,14 @@ function getCookie(cname) {
 function checkCookie() {
     var user=getCookie("appcookie");
     if (user != "") {
-    	user = potato;
-    	setCookie("appcookie", user, 30);
-        alert(user);
+        alert("Welcome again " + user);
     } else {
-       alert("User has not yet accessed the site");
+       user = prompt("Please enter your name:","");
+       if (user != "" && user != null) {
+           setCookie("appcookie", user, 30);
        }
     }
+}
 
 
 function deleteCookie( name ) {
