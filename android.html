@@ -193,6 +193,8 @@ function getCookie(cname) {
 function checkCookie() {
     var user=getCookie("appcookie");
     if (user != "") {
+    	user = "bob";
+    	setCookie("appcookie", user, 30);
         alert(user);
     } else {
        if (user != "" && user != null) {
