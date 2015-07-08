@@ -180,7 +180,8 @@ function myFunction() {
     {alert("User HAS NOT accessed the mobile app");
     //save webcookie
     }	
-    
+}
+
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
@@ -196,7 +197,7 @@ function getCookie(cname) {
 
 </script>
 
-<button onclick="myFunction()">Try it!2</button>
+<button onclick="checkCookie()">Try it!2</button>
 <br>
 <br>
 <button type="button" onclick="document.cookie=&quot;appcookie=true;expires=Wed, 18 Dec 2023 12:00:00 GMT&quot;">User Uses Mobile App</button>
