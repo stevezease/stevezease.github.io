@@ -195,11 +195,13 @@ function checkCookie() {
     if (user != "") {
         alert(user);
     } else {
-       user = prompt("Please enter your name:","");
-       if (user != "" && user != null) {
-           setCookie("appcookie", user, 30);
+       alert("User has not yet accessed the site");
        }
     }
+}
+
+function deleteCookie( name ) {
+  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
 </script>
@@ -207,10 +209,10 @@ function checkCookie() {
 <button onclick="checkCookie()">Try it!</button>
 <br>
 <br>
-<button type="button" onclick="checkCookie()">User Uses Mobile App!</button>
+<button type="button" onclick="checkCookie()">User Uses Mobile App</button>
 <br>
 <br>
-<button type="button" onclick="document.cookie=&quot;appcookie=true;expires=Wed; 01 Jan 1970&quot;">Reset</button>
+<button type="button" onclick="deleteCookie("appcookie")">Reset</button>
 <br>
 <br>
 
