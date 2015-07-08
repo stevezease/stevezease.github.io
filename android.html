@@ -214,8 +214,17 @@ function cookieValue() {
 }
 
 
-function deleteCookie( name ) {
-  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+function resetCookie() {
+    var user=getCookie("appcookie");
+    if (user != "") {
+    	setCookie("appcookie", "User HAS Not accessed the mobile app", 30);
+    	alert("Cookie has been reset!");
+    } else {
+       if (user != "" && user != null) {
+           setCookie("appcookie", "true", 30);
+       }
+    }
+}
 }
 
 </script>
@@ -226,7 +235,7 @@ function deleteCookie( name ) {
 <button type="button" onclick="checkCookie()">User Uses Mobile App</button>
 <br>
 <br>
-<button type="button" onclick="setCookie("appcookie", "false", 30)">Reset!</button>
+<button type="button" onclick="resetCookie()">Reset</button>
 <br>
 <br>
 
