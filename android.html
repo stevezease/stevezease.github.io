@@ -150,7 +150,7 @@ button:active {
 
 <br>
 
-<button onclick="myFunction()">Try it!</button>
+<button onclick="checkCookie()">Try it!!</button>
 
 <script>
 //variable that checks for saved mobile app cookie
@@ -162,7 +162,7 @@ var webstored = false;
 
 */
 function checkCookie() {
-    var user=getCookie("appcookie");
+    var user = getCookie("appcookie");
        if (appcookie != "" && appcookie != null) {
            appstored = true;
        }
@@ -178,6 +178,18 @@ function myFunction() {
     {alert("User HAS NOT accessed the mobile app");
     //save webcookie
     }	
+    
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+
 }
 
 </script>
