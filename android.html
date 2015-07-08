@@ -193,9 +193,8 @@ function getCookie(cname) {
 function checkCookie() {
     var user=getCookie("appcookie");
     if (user != "") {
-        alert("Welcome again " + user);
+        alert(user);
     } else {
-       user = prompt("Please enter your name:","");
        if (user != "" && user != null) {
            setCookie("appcookie", user, 30);
        }
