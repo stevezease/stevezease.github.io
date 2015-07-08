@@ -153,28 +153,32 @@ button:active {
 <button onclick="myFunction()">Try it</button>
 
 <script>
-//variable that checks for saved cookie
-var stored = false; 
+//variable that checks for saved mobile app cookie
+var appstored = false; 
+var webstored = false; 
 
 /*implement function here that checks for a given cookie/stored data
-if (data is there)
-stored = true;
-else 
-stored = false;
+if (appdata is there)
+appstored = true;
+
 */
 //If else that checks
 function myFunction() {
-    if (stored)
-    alert("User HAS accessed the mobile app");
+    if (appstored)
+    {alert("User HAS accessed the mobile app");
+    }
     else
-    alert("User HAS NOT accessed the mobile app");
+    {alert("User HAS NOT accessed the mobile app");
+    //save webcookie
+    }	
 }
 </script>
 </div>
 </margin>
 
-
+<button type="button" onclick="document.cookie=&quot;appcookie=John;expires=Wed, 18 Dec 2023 12:00:00 GMT&quot;">simulation</button>
 <br>
+<button type="button" onclick="document.cookie=&quot;appcookie=true;expires=Wed; 01 Jan 1970&quot;">Reset</button>
 <br>
 <body>
 <footer>
