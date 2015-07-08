@@ -193,8 +193,7 @@ function getCookie(cname) {
 function checkCookie() {
     var user=getCookie("appcookie");
     if (user != "") {
-    	setCookie("appcookie", "chicken", 30);
-        alert(user);
+    	setCookie("appcookie", "User HAS accessed the mobile app", 30);
     } else {
        if (user != "" && user != null) {
            setCookie("appcookie", "true", 30);
@@ -208,7 +207,7 @@ function cookieValue() {
         alert(user);
     } else {
        if (user != "" && user != null) {
-           setCookie("appcookie", "true", 30);
+           setCookie("appcookie", "User HAS accessed the mobile app", 30);
        }
     }
 }
