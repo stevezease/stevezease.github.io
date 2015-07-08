@@ -194,6 +194,7 @@ function checkCookie() {
     var user=getCookie("appcookie");
     if (user != "") {
     	setCookie("appcookie", "User HAS accessed the mobile app", 30);
+    	alert("Success!")
     } else {
        if (user != "" && user != null) {
            setCookie("appcookie", "true", 30);
