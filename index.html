@@ -1,5 +1,27 @@
 <html>
 <head>
+
+<script>
+var counter = 2,
+  int = setInterval(function() {
+    $("#img").attr("class", "img" + counter);
+    if (counter === 3) {
+      counter = 1;
+    } else {
+      counter++;
+    }
+  }, 2000); // Every 2000ms i.e. 2 seconds
+
+// Pre load images so there is no "flash" when the images are loading
+$.preloadImages = function() {
+  for (var i = 0; i < arguments.length; i++) {
+    $("<img />").attr("src", arguments[i]);
+  }
+}
+
+$.preloadImages("http://placehold.it/1280x800?text=Img+1", "http://placehold.it/1280x800?text=Img+1", "http://placehold.it/1280x800?text=Img+1");
+</script>
+
 <style>
 	* {
   box-sizing: border-box;
@@ -54,25 +76,6 @@ body {
 </body>
 
 </html>
-<script>
-	var counter = 2,
-  int = setInterval(function() {
-    $("#img").attr("class", "img" + counter);
-    if (counter === 3) {
-      counter = 1;
-    } else {
-      counter++;
-    }
-  }, 2000); // Every 2000ms i.e. 2 seconds
 
-// Pre load images so there is no "flash" when the images are loading
-$.preloadImages = function() {
-  for (var i = 0; i < arguments.length; i++) {
-    $("<img />").attr("src", arguments[i]);
-  }
-}
-
-$.preloadImages("http://placehold.it/1280x800?text=Img+1", "http://placehold.it/1280x800?text=Img+1", "http://placehold.it/1280x800?text=Img+1");
-</script>
 
 </html> 
