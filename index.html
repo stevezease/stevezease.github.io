@@ -29,7 +29,7 @@
     width: 100%; /*img width*/
 }
 
-
+.progress {height: 40px; width: 1000px}
   </style>
 </head>
 <body>
@@ -144,7 +144,15 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/The_C_Programming_Language_logo.svg/2000px-The_C_Programming_Language_logo.svg.png" alt="C" width="304" height="304"> 
           
         </div>
-       
+<div class="container">
+  <h2>Animated Progress Bar</h2>
+  <p>The .active class animates the progress bar:</p> 
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+      40%
+    </div>
+  </div>
+</div>
       </div>
 
       <hr class="featurette-divider">
