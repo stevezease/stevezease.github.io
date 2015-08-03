@@ -27,6 +27,26 @@ function readTextFile(file)
 
 
 <button onclick="readTextFile("file:///temp.txt)">Try it</button>
+<p>
+function readTextFile(file) <br>
+{<br>
+    var rawFile = new XMLHttpRequest();<br>
+    rawFile.open("GET", file, false);<br>
+    rawFile.onreadystatechange = function ()<br>
+    {<br>
+        if(rawFile.readyState === 4)<br>
+        {<br>
+            if(rawFile.status === 200 || rawFile.status == 0)<br>
+            {<br>
+                var allText = rawFile.responseText;<br>
+                alert(allText);<br>
+            }<br>
+        }<br>
+    }<br>
+    rawFile.send(null);<br>
+}<br>
+
+</p>
 
 </body>
 
