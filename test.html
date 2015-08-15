@@ -52,13 +52,25 @@ section {
   color:#efefef;
 }
 
+.btn{
+
+	background: transparent;
+	color: #F2F2F2;
+
+	/* CSS Transition */
+	-webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-ms-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-o-transition: background .2s ease-in-out, border .2s ease-in-out;
+	transition: background .2s ease-in-out, border .2s ease-in-out;
+
+}
+
 </style>
 
 <script>
 	/**
- * Author: Heather Corey
- * jQuery Simple Parallax Plugin
- *
+ * Parallax jquery used from bootply
  */
  
 (function($) {
@@ -114,8 +126,7 @@ $('.bg-2').parallax({
 <!--parallax 1 -->
 <section class="bg-1 text-center">
      <br>
-     <h1 class="">Bootstrap Parallax</h1>
-    <p class="lead">Add Some Motion</p>
+      <a class="btn">Resume</a>
 </section>
 <!--/parallax 1-->
 <div class="container">
