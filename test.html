@@ -11,7 +11,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 <style>
-
 /* changing the navbar to transparent */
 .navbar {
   background-color: transparent;
@@ -46,6 +45,7 @@
   color: white;
   text-decoration: none;
 }
+
 /* opaque class which will be attached on scroll */
 
 .navbar.opaque {
@@ -65,7 +65,6 @@
 .navbar.opaque .navbar-nav > li > a:active {
   text-decoration: underline;
 }
-
 
 .divider {
     height:50px;
@@ -126,16 +125,13 @@ section {
 
 <script>
 
-  function fadeIn(obj) {
-    $(obj).fadeIn(1000);}
-
  (function(){
     $(window).scroll(function() {
     
         // check if window scroll for more than 430px. May vary
         // as per the height of your main banner.
         
-        if($(this).scrollTop() > 435) { 
+        if($(this).scrollTop() > 430) { 
             $('.navbar').addClass('opaque'); // adding the opaque class
         } else {
             $('.navbar').removeClass('opaque'); // removing the opaque class
