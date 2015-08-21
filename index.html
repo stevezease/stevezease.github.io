@@ -137,6 +137,10 @@
         }
     });
   })();
+  
+  function fadeIn(obj) {
+    $(obj).fadeIn(1000);
+}
   </script>
 </head>
 <body>
@@ -175,7 +179,7 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img src="http://i.imgur.com/KU8wQer.jpg" alt="...">
+      <img src="http://i.imgur.com/KU8wQer.jpg" onload="fadeIn(this)" alt="...">
       <div class="carousel-caption">
           <h3>Quote of the day</h3>
       </div>
