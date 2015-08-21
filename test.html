@@ -6,13 +6,46 @@
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="/general.css">
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="/general.js"></script>
+
 
 <style>
+/* changing the navbar to transparent */
+.navbar {
+  background-color: white;
+  background: white;
+  border: none;
+  z-index: 100;
+  margin-bottom: 0;
+  border-radius: 0;
+   box-shadow: 0px 0px 4px #969696;
+}
+
+/* Adjusting the brand and link colors */
+
+.navbar-default .navbar-brand {
+  color: white;
+  font-weight: 500;
+}
+.navbar-default .navbar-brand:hover {
+  color: white;
+}
+.navbar-default .navbar-nav > li > a {
+   color: #969696;
+  font-weight: 500;
+  font-size: 1em;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:active {
+  color: white;
+  text-decoration: underline;
+}
+.navbar-default .navbar-nav > li > a:visited, .navbar-default .navbar-nav > li > a:focus {
+  color: white;
+  text-decoration: none;
+}
+
 
 .divider {
     height:50px;
@@ -155,7 +188,7 @@ $('.bg-2').parallax({
 <!--parallax 1 -->
 <section class="bg-1 text-center">
      <br>
-      <button type="button" class="btn btn-default">Education and Work History</button>
+      <button type="button" class="btn btn-default" style="font-size: 25px;">Education and Work History</button>
 </section>
 <!--/parallax 1-->
 <div class="container">
