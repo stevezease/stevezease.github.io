@@ -11,60 +11,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 <style>
-/* changing the navbar to transparent */
-.navbar {
-  background-color: transparent;
-  background: transparent;
-  border: none;
-  color: white;
-  z-index: 100;
-  margin-bottom: 0;
-  border-radius: 0;
-}
-
-/* Adjusting the brand and link colors */
-
-.navbar-default .navbar-brand {
-  color: white;
-  font-weight: 500;
-}
-.navbar-default .navbar-brand:hover {
-  color: white;
-}
-.navbar-default .navbar-nav > li > a {
-  color: white;
-  font-weight: 500;
-  font-size: 1em;
-  text-transform: lowercase;
-}
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:active {
-  color: white;
-  text-decoration: underline;
-}
-.navbar-default .navbar-nav > li > a:visited, .navbar-default .navbar-nav > li > a:focus {
-  color: white;
-  text-decoration: none;
-}
-
-/* opaque class which will be attached on scroll */
-
-.navbar.opaque {
-  background-color: white;
-  background: white;
-  transition: background-color 1s ease 0s; /* Transition effect to make it fade in (optional) */
-  box-shadow: 0px 0px 4px #969696;
-}
-.navbar.opaque .navbar-brand {
-  color: #969696;
-  transition: color 1s ease 0s;
-}
-.navbar.opaque .navbar-nav > li > a {
-  color: #969696;
-  transition: color 1s ease 0s;
-}
-.navbar.opaque .navbar-nav > li > a:active {
-  text-decoration: underline;
-}
 
 .divider {
     height:50px;
@@ -124,20 +70,6 @@ section {
 </style>
 
 <script>
-
- (function(){
-    $(window).scroll(function() {
-    
-        // check if window scroll for more than 430px. May vary
-        // as per the height of your main banner.
-        
-        if($(this).scrollTop() > 100) { 
-            $('.navbar').addClass('opaque'); // adding the opaque class
-        } else {
-            $('.navbar').removeClass('opaque'); // removing the opaque class
-        }
-    });
-  })();
 	/**
  * Parallax jquery used from bootply
  */
