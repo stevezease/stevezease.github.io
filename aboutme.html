@@ -1,164 +1,246 @@
-<html>
-<header><title>Steven's Website</title></header>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<style>
-#header {
-    background-color:black;
-    color:white;
-    text-align:center;
-    font: 70px Century Gothic;
-    padding: 0px;
-    border: 0px;
-    height: 100px;
-}
+    <link rel="shortcut icon" href="http://www.iconj.com/ico/2/7/27ko5ihwhs.ico" type="image/x-icon" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-nav {
-    line-height:50px;
-    background-color:#eeeeee;
-     padding-left:2em
-	}
-post {
-     position: relative;
-    left: -20px;
-    display:block;
-    color:black;
-    font: 15px Tahoma;
-    margin-left: 5em;
-    text-align:left;
-     
-}
-footer {
-    background-color:#eeeeee;
-    color:black;
-    clear:both;
-    text-align:center;
-    padding:5px;	 
-    font: 12px Century Gothic;	 
-}
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
-body {
-  color: #fff;
-  font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
-}
-.box2 {
-  background: #D3D3D3;
-  border-radius: 3px;
-  cursor: pointer;
-  height: 46px;
-  line-height: 46px;
-  text-align: center;
-  transition-property: background;
-  transition-duration: .5s;
-  transition-timing-function: linear;
-  width: 92px;
-  display: inline-block;
-}
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <link href="carousel.css" rel="stylesheet">
+  
+  <title>Steven Jin</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="//static.miniclipcdn.com/js/game-embed.js"></script>
+  <style>
+  
+ 
 
-.box1:hover {
-  background: #D3D3D3;
-}
+  .carousel-caption {
+    top: 120px;
+    bottom: auto;
+  }
+  
+  .btn{
 
-.box1 {
-  background: #808080;
-  border-radius: 3px;
-  cursor: pointer;
-  height: 46px;
-  line-height: 46px;
-  text-align: center;
-  transition-property: background;
-  transition-duration: .5s;
-  transition-timing-function: linear;
-  width: 92px;
-  display: inline-block;
-}
+	background: transparent;
+	color: #F2F2F2;
 
-.box2:hover {
-  background: #808080;
-}
+	/* CSS Transition */
+	-webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-ms-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-o-transition: background .2s ease-in-out, border .2s ease-in-out;
+	transition: background .2s ease-in-out, border .2s ease-in-out;
 
-.margins {
-    padding-right: 250px;
-    padding-left: 250px;
 }
-
-body {
-  font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
-   margin {
-margin-right:50px;
-   margin-left: 50px;
-}
+    .navbar { margin-bottom:0px;}
+    
+    .carousel-inner{
+    width:100%;
+    max-height: 500px !important;
+    }
+     .carousel .item img {
+    width: 100%; /*img width*/
 }
 
 
 
-button {
-  border: 0;
-  background: #0087cc;
-  border-radius: 4px;
-  box-shadow: 0 5px 0 #006599;
-  color: #fff;
-  cursor: pointer;
-  font: inherit;
-  margin: 0;
-  outline: 0;
-  padding: 12px 20px;
-  transition: all .1s linear;
-}
-button:active {
-  box-shadow: 0 2px 0 #006599;
-  transform: translateY(3px);
-}
-.divider{
-    width:5px;
-    height:auto;
-    float: left;
+/* changing the navbar to transparent */
+.navbar {
+  background-color: transparent;
+  background: transparent;
+  border: none;
+  color: black;
+  z-index: 100;
+  margin-bottom: 0;
+  border-radius: 0;
 }
 
+/* Adjusting the brand and link colors */
 
+.navbar-default .navbar-brand {
+  color: white;
+  font-weight: 500;
+}
+.navbar-default .navbar-brand:hover {
+  color: white;
+}
+.navbar-default .navbar-nav > li > a {
+  color: black;
+  font-weight: 500;
+  font-size: 1em;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:active {
+  color: black;
+  text-decoration: underline;
+}
+.navbar-default .navbar-nav > li > a:visited, .navbar-default .navbar-nav > li > a:focus {
+  color: black;
+  text-decoration: none;
+}
+/* opaque class which will be attached on scroll */
 
-</style>
+.navbar.opaque {
+  background-color: white;
+  background: white;
+  transition: background-color 1s ease 0s; /* Transition effect to make it fade in (optional) */
+  box-shadow: 0px 0px 4px #969696;
+}
+.navbar.opaque .navbar-brand {
+  color: #969696;
+  transition: color 1s ease 0s;
+}
+.navbar.opaque .navbar-nav > li > a {
+  color: #969696;
+  transition: color 1s ease 0s;
+}
+.navbar.opaque .navbar-nav > li > a:active {
+  text-decoration: underline;
+}
+
+#footer {
+    height: 200px;
+    background-color:#585858;
+    margin-top:50px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+#footer a {
+  color:#ffffff;
+}
+  </style>
+  
+  <script>
+  
+  $(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+  
+    (function(){
+    $(window).scroll(function() {
+    
+        // check if window scroll for more than 430px. May vary
+        // as per the height of your main banner.
+        
+        if($(this).scrollTop() > 435) { 
+            $('.navbar').addClass('opaque'); // adding the opaque class
+        } else {
+            $('.navbar').removeClass('opaque'); // removing the opaque class
+        }
+    });
+  })();
+  
+  function fadeIn(obj) {
+    $(obj).fadeIn(1000);
+}
+var bar = $('.value-bar');
+$(function(){
+  $(bar).each(function(){
+    bar_width = $(this).attr('aria-valuenow');
+    $(this).width(bar_width + '%');
+  });
+});
+  </script>
 </head>
-
 <body>
+  
+  
 
-<div id="header">
-<p>Steven Jin</p>
-</div>
-
-<nav>
-<!-- <a href="https://i.imgur.com/6PlRXhIh.jpg">Resume</a> -->
-<!--<buttons onclick="javascript:location.href='https://clintonbarnesdotnet.files.wordpress.com/2014/08/resume-meme.jpg'">Resume</buttons>
--->
-<div class="box2" onclick="javascript:location.href='index.html'">Home</div>
-<div class="box2">Resume</div>
-<div class="box1"> About Me</div>
-<div class="box2" onclick="javascript:location.href='WebDev.html'"> WebDev</div>
-<div class="box2" onclick="javascript:location.href='android.html'"> Android</div>
-<div class="box2" onclick="javascript:location.href='temp.html'">Contact Me</div>
+<!--The Nav Bar-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+       <a class="navbar-brand" rel="home">
+        <img style="max-width:50px; margin-top: -7px;"
+             src="http://i.imgur.com/w7EeGAQ.png">
+    </a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Home</a></li>
+        <li><a href="http://stevezease.github.io/test.html">Resume</a></li>
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">CIS351</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
-<br></br>
-
-<margin>
-<div align ="center">
-
-<div style="font-family: Century Gothic; color: black">
-<h2> About Me</h2>
-</div>
-<div style="font-family: Century Gothic; color: black">
-<p class="margins" > Hi! I'm Steven. I like cookies. </p>
-</div>
-<br>
-</div>
-<div align ="center">
-
-</div>
-</margin>
 
 
+<br><br><br><br>
+      <div class="row featurette">
+          
+        <div class="col-md-5">
+        	<img src="http://www.subitup.com/uploads/images/trusted-by/%5CSyracuse_Logo.jpg" width="200" height="200">
+        </div>
+         <div class="col-md-7">
+         <center>
+        <h2>About Me</h2>
+        <hr>
+          <p>Expected Graduation Date: May 2017</p>
+          <p>Physics and Computer Science Dual Major</p>
+          <p>Renée Crown University Honors Student</p>
+          <p>Cumulative GPA: 2.91                 </p>
+            </center>
+            
+        </div>
+      </div>
 
-<body>
+
+</body>
 <footer>
-Copyright © 2015 Steven Jin. All rights reserved.
+<div id="footer" class="">
+    <div class="container">
+       <center>
+       	<h3>Let's Stay In Touch!</h3>
+       </center>
+       
+      <div class="row">
+    <div class="col-md-3">
+        <center>
+      <a href="mailto:yjin02@syr.edu" target="_top">
+      <img src="http://www.cbc.ca/documentaries/content/images/__common/icon_email.png"  width="120" height="120"> 
+      </a>
+       </center>
+    </div>
+    
+    <div class="col-md-3"> 
+     <center>
+     	<a title="Reach me by phone" data-toggle="popover" data-placement="top" data-content="Mobile: 917-515-0615">
+          <img src="http://www.clker.com/cliparts/0/f/c/2/1195445181899094722molumen_phone_icon.svg.hi.png" width="95" height="95"> 
+        </a>  
+     </center>
+       
+    </div>
+    <div class="col-md-3"> 
+     <center>  
+     <a href="https://www.facebook.com/TheWorldIsGoingJinsane">
+    <img src="http://uxrepo.com/static/icon-sets/brandico/svg/facebook-rect.svg" alt="HTML"width="100" height="100"> 
+      </a>
+      </center>
+    </div>
+    
+     <div class="col-md-3"> 
+     <center>  
+     	<a title="See you in the fields of justice!" data-toggle="popover" data-placement="top" data-content="NA LoL: MasterYiJin">
+    <img src="http://uxrepo.com/static/icon-sets/ionicons/svg/game-controller-b.svg" alt="HTML"width="120" height="120"> 
+       </a>  
+      </center>
+    </div>
+    
+  </div>   
+       
+    </div>
+</div>
+
 </footer>
 </html>
