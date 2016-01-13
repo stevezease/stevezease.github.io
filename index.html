@@ -25,6 +25,11 @@
   
 .pixs { visibility: hidden;}
 
+.left { visibility: hidden;}
+
+.right { visibility: hidden;}
+
+
   .carousel-caption {
     top: 120px;
     bottom: auto;
@@ -237,6 +242,21 @@ $(function(){
     <br>
 </div>
 
+<div class="jumbotron" style="background-color:#218C8D;">
+	 <br>
+<div class="col-md-4">
+        <center>
+      <img src="http://www2.psd100.com/ppp/2013/11/2701/Atom-logo-1127205251.png" alt="Physicist" width="200" height="200" class="left"> 
+       </center>
+    </div>
+    <div class="col-md-8"> 
+     <center>
+          <h1 style="color:white; font-size: 1200%;" class="left">Physicist</h1>
+     </center>
+    </div>
+    <br>
+</div>
+
 <div class="container" style="background-color:#218C8D;">
   
   <div class="row">
@@ -397,6 +417,17 @@ $(function(){
 		var topOfWindow = $(window).scrollTop();
 			if (imagePos < topOfWindow+400) {
 				$(this).removeClass("pixs").addClass("slideUp");
+			}
+		});
+	});
+	
+		$(window).scroll(function() {
+		$('.left').each(function(){
+		var imagePos = $(this).offset().top;
+
+		var topOfWindow = $(window).scrollTop();
+			if (imagePos < topOfWindow+400) {
+				$(this).removeClass("left").addClass("slideLeft");
 			}
 		});
 	});
