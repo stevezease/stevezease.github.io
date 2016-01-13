@@ -25,9 +25,9 @@
   
 .pixs { visibility: hidden;}
 
-.left { visibility: hidden;}
+.lefts { visibility: hidden;}
 
-.right { visibility: hidden;}
+.rights { visibility: hidden;}
 
 
   .carousel-caption {
@@ -251,9 +251,26 @@ $(function(){
     </div>
     <div class="col-md-9"> 
      <center>
-          <h1 style="color:white; font-size: 1200%;" class="left">Physicist</h1>
+          <h1 style="color:white; font-size: 1000%;" class="left">Physicist</h1>
      </center>
     </div>
+    <br>
+</div>
+<br>
+
+<div class="container" style="background-color: #EF7126;">
+	 <br>
+	 <div class="col-md-9"> 
+     <center>
+          <h1 style="color:white; font-size: 1000%;" class="Rights">Coder</h1>
+     </center>
+    </div>
+<div class="col-md-3">
+        <center>
+      <img src="http://simpleicon.com/wp-content/uploads/computer-5.svg" width="200" height="200" class="Rights"> 
+       </center>
+    </div>
+    
     <br>
 </div>
 
@@ -263,16 +280,18 @@ $(function(){
 	 <br>
 <div class="col-md-3">
         <center>
-      <img src="http://i.imgur.com/0nyL02s.png" width="200" height="200" class="left"> 
+      <img src="http://i.imgur.com/0nyL02s.png" width="200" height="200" class="lefts"> 
        </center>
     </div>
     <div class="col-md-9"> 
      <center>
-          <h1 style="color:white; font-size: 1200%;" class="left">Consultant</h1>
+          <h1 style="color:white; font-size: 1000%;" class="lefts">Consultant</h1>
      </center>
     </div>
     <br>
 </div>
+
+<br>
 
 <div class="container" style="background-color:#218C8D;">
   
@@ -439,12 +458,23 @@ $(function(){
 	});
 	
 		$(window).scroll(function() {
-		$('.left').each(function(){
+		$('.lefts').each(function(){
 		var imagePos = $(this).offset().top;
 
 		var topOfWindow = $(window).scrollTop();
 			if (imagePos < topOfWindow+400) {
-				$(this).removeClass("left").addClass("slideLeft");
+				$(this).removeClass("lefts").addClass("slideLeft");
+			}
+		});
+	});
+	
+		$(window).scroll(function() {
+		$('.rights').each(function(){
+		var imagePos = $(this).offset().top;
+
+		var topOfWindow = $(window).scrollTop();
+			if (imagePos < topOfWindow+400) {
+				$(this).removeClass("rights").addClass("slideRight");
 			}
 		});
 	});
