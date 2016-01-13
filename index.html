@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="shortcut icon" href="http://www.iconj.com/ico/2/7/27ko5ihwhs.ico" type="image/x-icon" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,9 +19,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
   <style>
   
  
+#object{
+	background-color: #fe5652;
+
+	visibility: hidden;
+}
 
   .carousel-caption {
     top: 120px;
@@ -153,6 +160,19 @@ $(function(){
 </head>
 <body>
   
+<script>
+	$(window).scroll(function() {
+		$('#animatedElement').each(function(){
+		var imagePos = $(this).offset().top;
+
+		var topOfWindow = $(window).scrollTop();
+			if (imagePos < topOfWindow+400) {
+				$(this).addClass("slideUp");
+			}
+		});
+	});
+</script>  
+  
   
 
 <!--The Nav Bar-->
@@ -253,7 +273,9 @@ $(function(){
     </div>
     <div class="col-md-4"> 
      <center>  
+         <div id="object" class="slideUp">
     <img src="http://cdns2.freepik.com/free-photo/_318-33091.jpg" alt="HTML" width="150" height="150"> 
+         </div>
        <h4>Consultant</h4>
        <p>As a consultant, my top priority is to offer clients efficient and professional solutions</p>
       </center>
