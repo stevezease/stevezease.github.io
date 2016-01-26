@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="http://www.iconj.com/ico/2/7/27ko5ihwhs.ico" type="image/x-icon" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <link href="carousel.css" rel="stylesheet">
+  
+  <title>Steven Jin</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="//static.miniclipcdn.com/js/game-embed.js"></script>
+  <style>
+  
+ 
+
+  .carousel-caption {
+    top: 120px;
+    bottom: auto;
+  }
+  
+  .btn{
+
+	background: transparent;
+	color: #F2F2F2;
+
+	/* CSS Transition */
+	-webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-ms-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-o-transition: background .2s ease-in-out, border .2s ease-in-out;
+	transition: background .2s ease-in-out, border .2s ease-in-out;
+
+}
+    .navbar { margin-bottom:0px;}
+    
+    .carousel-inner{
+    width:100%;
+    max-height: 500px !important;
+    }
+     .carousel .item img {
+    width: 100%; /*img width*/
+}
+
+
+
+/* changing the navbar to transparent */
+.navbar {
+  background-color: transparent;
+  background: transparent;
+  border: none;
+  color: black;
+  z-index: 100;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* Adjusting the brand and link colors */
+
+.navbar-default .navbar-brand {
+  color: white;
+  font-weight: 500;
+}
+.navbar-default .navbar-brand:hover {
+  color: white;
+}
+.navbar-default .navbar-nav > li > a {
+  color: black;
+  font-weight: 500;
+  font-size: 1em;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:active {
+  color: black;
+  text-decoration: underline;
+}
+.navbar-default .navbar-nav > li > a:visited, .navbar-default .navbar-nav > li > a:focus {
+  color: black;
+  text-decoration: none;
+}
+/* opaque class which will be attached on scroll */
+
+.navbar.opaque {
+  background-color: white;
+  background: white;
+  transition: background-color 1s ease 0s; /* Transition effect to make it fade in (optional) */
+  box-shadow: 0px 0px 4px #969696;
+}
+.navbar.opaque .navbar-brand {
+  color: #969696;
+  transition: color 1s ease 0s;
+}
+.navbar.opaque .navbar-nav > li > a {
+  color: #969696;
+  transition: color 1s ease 0s;
+}
+.navbar.opaque .navbar-nav > li > a:active {
+  text-decoration: underline;
+}
+
+#footer {
+    min-height: 150px;
+    background: url(http://rudymaxasworld.com/wp-content/themes/bones/library/images/white_footer.png) 50% 50%;
+    background-size: 100% 100%;
+    margin-top:50px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+#footer a {
+  color:#ffffff;
+}
+  </style>
+  
+  <script>
+  
+  $(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+  
+    (function(){
+    $(window).scroll(function() {
+    
+        // check if window scroll for more than 430px. May vary
+        // as per the height of your main banner.
+        
+        if($(this).scrollTop() > 435) { 
+            $('.navbar').addClass('opaque'); // adding the opaque class
+        } else {
+            $('.navbar').removeClass('opaque'); // removing the opaque class
+        }
+    });
+  })();
+  
+  function fadeIn(obj) {
+    $(obj).fadeIn(1000);
+}
+var bar = $('.value-bar');
+$(function(){
+  $(bar).each(function(){
+    bar_width = $(this).attr('aria-valuenow');
+    $(this).width(bar_width + '%');
+  });
+});
+  </script>
+</head>
+<body background="http://cdn.mysitemyway.com/etc-mysitemyway/backgrounds/legacy-previews/backgrounds/curtains/curtains-001654-glossy-white.jpg">
+  
+  
+
+<!--The Nav Bar-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+       <a class="navbar-brand" rel="home">
+        <img style="max-width:50px; margin-top: -7px;"
+             src="http://i.imgur.com/w7EeGAQ.png">
+    </a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://stevezease.github.io/">Home</a></li>
+        <li><a href="http://stevezease.github.io/resume.html">Resume</a></li>
+        <li><a>About Me</a></li>
+        <li><a href="#">CIS351</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<br><br><br><br><br><br><br><br>
+<center><h1>Blog Post 1<h1></center>
+<h3>Picture 1</h3>
+<br>
+<h3>Picture 2</h3>
+<br>
+<h3>Picture 3</h3>
+<br>
+<h3>Picture 4</h3>
+<br>
+<h3>Picture 5</h3>
+<br>
+
+
+<footer>
+<div id="footer" class="">
+    <div class="container">
+       <center>
+       	<h3>Let's Stay In Touch!</h3>
+       </center>
+       
+      <div class="row">
+    <div class="col-md-3">
+        <center>
+      <a href="mailto:yjin02@syr.edu" target="_top">
+      <img src="http://iconshow.me/media/images/Mixed/Free-Flat-UI-Icons/png/256/mail-24-256.png"  width="120" height="90"> 
+      </a>
+       </center>
+    </div>
+    
+    <div class="col-md-3"> 
+     <center>
+     	<a title="Reach me by phone" data-toggle="popover" data-placement="top" data-content="Mobile: 917-515-0615">
+          <img src="http://www.clker.com/cliparts/0/f/c/2/1195445181899094722molumen_phone_icon.svg.hi.png" width="100" height="100"> 
+        </a>  
+     </center>
+       
+    </div>
+    <div class="col-md-3"> 
+     <center>  
+     <a href="https://www.facebook.com/TheWorldIsGoingJinsane">
+    <img src="http://uxrepo.com/static/icon-sets/brandico/svg/facebook-rect.svg" alt="HTML"width="100" height="100"> 
+      </a>
+      </center>
+    </div>
+    
+     <div class="col-md-3"> 
+     <center>  
+     	<a title="See you in the fields of justice!" data-toggle="popover" data-placement="top" data-content="NA LoL: MasterYiJin">
+    <img src="http://uxrepo.com/static/icon-sets/ionicons/svg/game-controller-b.svg" alt="HTML"width="120" height="120"> 
+       </a>  
+      </center>
+    </div>
+    
+  </div>   
+       
+    </div>
+</div>
+
+</footer>
+</body>
+</html>
