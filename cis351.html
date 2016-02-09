@@ -1,347 +1,726 @@
 <html>
 <style>
-/*
- * Tady: http://tady.me
- * @tadywankenobi
- */
-
-/**
- * Move in a circle without wrapper elements
- * Idea by Aryeh Gregor, simplified by Lea Verou, borrowed by me!
- */
-
-@mixin vp-anim($radius,$pname, $deg: 360deg) {
-  @-webkit-keyframes rot-#{$pname} {
-    from {
-      -webkit-transform: rotate(0deg)
-                 translatey(-$radius)
-                 rotate(0deg);
-    }
-    to {
-      -webkit-transform: rotate(360deg)
-                 translatey(-$radius) 
-                 rotate(-$deg);
-    }
-  }
-  @-moz-keyframes rot-#{$pname} {
-    from {
-      -moz-transform: rotate(0deg)
-                 translatey(-$radius)
-                 rotate(0deg);
-    }
-    to {
-      -moz-transform: rotate(360deg)
-                 translatey(-$radius) 
-                 rotate(-$deg);
-    }
-  }
-  @-keyframes rot-#{$pname} {
-    from {
-      transform: rotate(0deg)
-                 translatey(-$radius)
-                 rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg)
-                 translatey(-$radius) 
-                 rotate(-$deg);
-    }
-  }
-}
-
-$baseUnit: 0.1;        // Speed of Orrery. At 1, 1 sec = 1 day
-$sunRad: 72px;          // Radius of the sun, added to orbit radii
-$rFactor: 2;            // Adding a radius factor so orbit radii are easier to observe
-$middleOffset: 800px;
-
-$scale: 0.75;              // Play around with changing this to change the visible motion default: 0.75
-
-$middle: $middleOffset*(1/$scale);
-
-$planets: (
-  ('mer',8.8s*$baseUnit,(6px*$rFactor)+$sunRad,1.75px,#888),
-  ('ven',22.5s*$baseUnit,(9px*$rFactor)+$sunRad,2.75px,#f5f9be),
-  ('ear',36.5s*$baseUnit,(15px*$rFactor)+$sunRad,3.5px,#4b94f9),
-  ('mar',68.7s*$baseUnit,(23px*$rFactor)+$sunRad,3px,#dd411a),
-  ('jup',433.2s*$baseUnit,(78px*$rFactor)+$sunRad,35px,#eaad3b),
-  ('sat',1075.9s*$baseUnit,(145px*$rFactor)+$sunRad,29px,#d6cd93),
-  ('ura',3068.7s*$baseUnit,(288px*$rFactor)+$sunRad,13px,#bfeef2),
-  ('nep',6019s*$baseUnit,(450px*$rFactor)+$sunRad,12px,#363ed7),
-  ('plu',9046.5s*$baseUnit,(587px*$rFactor)+$sunRad,1.5px,#963)
- );
-
 body {
   background-color: #012;
-  background-image: url('https://cssanimation.rocks/starwars/images/bg.jpg');
+  background-image: url("https://cssanimation.rocks/starwars/images/bg.jpg");
   background-size: 33%;
   background-repeat: repeat;
-  min-height: 2700px * $scale;
+  min-height: 2025px;
 }
 
-
 .system {
-  position:relative;
-  top: 0; left: 0;
-  width:100%;
-  height:100%;
-  -webkit-transform: scale($scale);
-  -moz-transform: scale($scale);
-  transform: scale($scale);
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0.75);
+  transform: scale(0.75);
 }
 
 .sun {
-  width: $sunRad*2;
-  height:$sunRad*2;
-  border-radius: $sunRad;
-  position:absolute;
-  top: $middle;
-  left:50%;
-  margin: -$sunRad;
-  //background-color: yellow;
-  background-image: url('http://sdo.gsfc.nasa.gov/assets/img/latest/latest_256_HMIIF.jpg');
-  background-size:$sunRad*2;
-  background-repeat:no-repeat;
+  width: 144px;
+  height: 144px;
+  border-radius: 72px;
+  position: absolute;
+  top: 1066.66667px;
+  left: 50%;
+  margin: -72px;
+  background-image: url("http://sdo.gsfc.nasa.gov/assets/img/latest/latest_256_HMIIF.jpg");
+  background-size: 144px;
+  background-repeat: no-repeat;
 }
 
-@each $planet in $planets {
-  $name: nth($planet, 1);
-  $orb: nth($planet,2);
-  $rad: nth($planet,3);
-  $prad: nth($planet,4);
-  $col: nth($planet,5);
-  
-  @include vp-anim($rad,$name);
-  
-    .#{$name} {
-      width: $prad * 2;
-      height: $prad*2;
-      border-radius:50%;
-      background-color:$col;
-      position: absolute;
-      top: $middle;
-      left: 50%;
-      margin: -$prad;
-      -webkit-animation: rot-#{$name} $orb infinite linear;
-      -moz-animation: rot-#{$name} $orb infinite linear;
-      animation: rot-#{$name} $orb infinite linear; 
-      z-index:200;
-    }
-  .#{$name}-path {
-        $orbitPath: $rad*2;
-        width: $orbitPath;
-        height: $orbitPath;
-        border-radius:50%;
-        z-index:100;
-        position:absolute;
-        top: $middle;
-        left:50%;
-        margin:-($orbitPath / 2);
-        border: solid 1px #444;
-      }
+@-webkit-keyframes rot-mer {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-84px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translatey(-84px) rotate(-360deg);
+  }
+}
+@-keyframes rot-mer {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-84px) rotate(0deg);
+            transform: rotate(0deg) translatey(-84px) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translatey(-84px) rotate(-360deg);
+            transform: rotate(360deg) translatey(-84px) rotate(-360deg);
+  }
+}
+.mer {
+  width: 3.5px;
+  height: 3.5px;
+  border-radius: 50%;
+  background-color: #888;
+  position: absolute;
+  top: 1066.66667px;
+  left: 50%;
+  margin: -1.75px;
+  -webkit-animation: rot-mer 0.88s infinite linear;
+  animation: rot-mer 0.88s infinite linear;
+  z-index: 200;
 }
 
-@include vp-anim(7px,lune);
+.mer-path {
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  z-index: 100;
+  position: absolute;
+  top: 1066.66667px;
+  left: 50%;
+  margin: -84px;
+  border: solid 1px #444;
+}
 
+@-webkit-keyframes rot-ven {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-90px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translatey(-90px) rotate(-360deg);
+  }
+}
+@-keyframes rot-ven {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-90px) rotate(0deg);
+            transform: rotate(0deg) translatey(-90px) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translatey(-90px) rotate(-360deg);
+            transform: rotate(360deg) translatey(-90px) rotate(-360deg);
+  }
+}
+.ven {
+  width: 5.5px;
+  height: 5.5px;
+  border-radius: 50%;
+  background-color: #f5f9be;
+  position: absolute;
+  top: 1066.66667px;
+  left: 50%;
+  margin: -2.75px;
+  -webkit-animation: rot-ven 2.25s infinite linear;
+  animation: rot-ven 2.25s infinite linear;
+  z-index: 200;
+}
+
+.ven-path {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  z-index: 100;
+  position: absolute;
+  top: 1066.66667px;
+  left: 50%;
+  margin: -90px;
+  border: solid 1px #444;
+}
+
+@-webkit-keyframes rot-ear {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-102px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translatey(-102px) rotate(-360deg);
+  }
+}
+@-keyframes rot-ear {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-102px) rotate(0deg);
+            transform: rotate(0deg) translatey(-102px) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translatey(-102px) rotate(-360deg);
+            transform: rotate(360deg) translatey(-102px) rotate(-360deg);
+  }
+}
+.ear {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #4b94f9;
+  position: absolute;
+  top: 1066.66667px;
+  left: 50%;
+  margin: -3.5px;
+  -webkit-animation: rot-ear 3.65s infinite linear;
+  animation: rot-ear 3.65s infinite linear;
+  z-index: 200;
+}
+
+.ear-path {
+  width: 204px;
+  height: 204px;
+  border-radius: 50%;
+  z-index: 100;
+  position: absolute;
+  top: 1066.66667px;
+  left: 50%;
+  margin: -102px;
+  border: solid 1px #444;
+}
+
+@-webkit-keyframes rot-mar {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-118px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translatey(-118px) rotate(-360deg);
+  }
+}
+@-keyframes rot-mar {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-118px) rotate(0deg);
+            transform: rotate(0deg) translatey(-118px) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translatey(-118px) rotate(-360deg);
+            transform: rotate(360deg) translatey(-118px) rotate(-360deg);
+  }
+}
+.mar {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #dd411a;
+  position: absolute;
+  top: 1066.66667px;
+  left: 50%;
+  margin: -3px;
+  -webkit-animation: rot-mar 6.87s infinite linear;
+  animation: rot-mar 6.87s infinite linear;
+  z-index: 200;
+}
+
+.mar-path {
+  width: 236px;
+  height: 236px;
+  border-radius: 50%;
+  z-index: 100;
+  position: absolute;
+  top: 1066.66667px;
+  left: 50%;
+  margin: -118px;
+  border: solid 1px #444;
+}
+
+@-webkit-keyframes rot-jup {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-228px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translatey(-228px) rotate(-360deg);
+  }
+}
+@-keyframes rot-jup {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-228px) rotate(0deg);
+            transform: rotate(0deg) translatey(-228px) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translatey(-228px) rotate(-360deg);
+            transform: rotate(360deg) translatey(-228px) rotate(-360deg);
+  }
+}
+.jup {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #eaad3b;
+  position: absolute;
+  top: 1066.66667px;
+  left: 50%;
+  margin: -35px;
+  -webkit-animation: rot-jup 43.32s infinite linear;
+  animation: rot-jup 43.32s infinite linear;
+  z-index: 200;
+}
+
+.jup-path {
+  width: 456px;
+  height: 456px;
+  border-radius: 50%;
+  z-index: 100;
+  position: absolute;
+  top: 1066.66667px;
+  left: 50%;
+  margin: -228px;
+  border: solid 1px #444;
+}
+
+@-webkit-keyframes rot-sat {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-362px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translatey(-362px) rotate(-360deg);
+  }
+}
+@-keyframes rot-sat {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-362px) rotate(0deg);
+            transform: rotate(0deg) translatey(-362px) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translatey(-362px) rotate(-360deg);
+            transform: rotate(360deg) translatey(-362px) rotate(-360deg);
+  }
+}
+.sat {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: #d6cd93;
+  position: absolute;
+  top: 1066.66667px;
+  left: 50%;
+  margin: -29px;
+  -webkit-animation: rot-sat 107.59s infinite linear;
+  animation: rot-sat 107.59s infinite linear;
+  z-index: 200;
+}
+
+.sat-path {
+  width: 724px;
+  height: 724px;
+  border-radius: 50%;
+  z-index: 100;
+  position: absolute;
+  top: 1066.66667px;
+  left: 50%;
+  margin: -362px;
+  border: solid 1px #444;
+}
+
+@-webkit-keyframes rot-ura {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-648px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translatey(-648px) rotate(-360deg);
+  }
+}
+@-keyframes rot-ura {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-648px) rotate(0deg);
+            transform: rotate(0deg) translatey(-648px) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translatey(-648px) rotate(-360deg);
+            transform: rotate(360deg) translatey(-648px) rotate(-360deg);
+  }
+}
+.ura {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #bfeef2;
+  position: absolute;
+  top: 1066.66667px;
+  left: 50%;
+  margin: -13px;
+  -webkit-animation: rot-ura 306.87s infinite linear;
+  animation: rot-ura 306.87s infinite linear;
+  z-index: 200;
+}
+
+.ura-path {
+  width: 1296px;
+  height: 1296px;
+  border-radius: 50%;
+  z-index: 100;
+  position: absolute;
+  top: 1066.66667px;
+  left: 50%;
+  margin: -648px;
+  border: solid 1px #444;
+}
+
+@-webkit-keyframes rot-nep {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-972px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translatey(-972px) rotate(-360deg);
+  }
+}
+@-keyframes rot-nep {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-972px) rotate(0deg);
+            transform: rotate(0deg) translatey(-972px) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translatey(-972px) rotate(-360deg);
+            transform: rotate(360deg) translatey(-972px) rotate(-360deg);
+  }
+}
+.nep {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #363ed7;
+  position: absolute;
+  top: 1066.66667px;
+  left: 50%;
+  margin: -12px;
+  -webkit-animation: rot-nep 601.9s infinite linear;
+  animation: rot-nep 601.9s infinite linear;
+  z-index: 200;
+}
+
+.nep-path {
+  width: 1944px;
+  height: 1944px;
+  border-radius: 50%;
+  z-index: 100;
+  position: absolute;
+  top: 1066.66667px;
+  left: 50%;
+  margin: -972px;
+  border: solid 1px #444;
+}
+
+@-webkit-keyframes rot-plu {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-1246px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translatey(-1246px) rotate(-360deg);
+  }
+}
+@-keyframes rot-plu {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-1246px) rotate(0deg);
+            transform: rotate(0deg) translatey(-1246px) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translatey(-1246px) rotate(-360deg);
+            transform: rotate(360deg) translatey(-1246px) rotate(-360deg);
+  }
+}
+.plu {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #963;
+  position: absolute;
+  top: 1066.66667px;
+  left: 50%;
+  margin: -1.5px;
+  -webkit-animation: rot-plu 904.65s infinite linear;
+  animation: rot-plu 904.65s infinite linear;
+  z-index: 200;
+}
+
+.plu-path {
+  width: 2492px;
+  height: 2492px;
+  border-radius: 50%;
+  z-index: 100;
+  position: absolute;
+  top: 1066.66667px;
+  left: 50%;
+  margin: -1246px;
+  border: solid 1px #444;
+}
+
+@-webkit-keyframes rot-lune {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-7px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translatey(-7px) rotate(-360deg);
+  }
+}
+@-keyframes rot-lune {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-7px) rotate(0deg);
+            transform: rotate(0deg) translatey(-7px) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translatey(-7px) rotate(-360deg);
+            transform: rotate(360deg) translatey(-7px) rotate(-360deg);
+  }
+}
 .lune {
-  width:2px;
-  height:2px;
+  width: 2px;
+  height: 2px;
   background-color: #fff;
-  position:absolute;
-  $lunOrb: 2.7s * $baseUnit;
+  position: absolute;
   top: 50%;
-  left:50%;
-  margin:-1.5px;
-  -webkit-animation: rot-lune $lunOrb infinite linear;
-  -moz-animation: rot-lune $lunOrb infinite linear;
-  animation: rot-lune $lunOrb infinite linear;
+  left: 50%;
+  margin: -1.5px;
+  -webkit-animation: rot-lune 0.27s infinite linear;
+  animation: rot-lune 0.27s infinite linear;
 }
 
 .mar {
-  background-image: repeating-linear-gradient(
-    to bottom,
-    #fff,
-    #fff 1px,
-    transparent 1px,
-    transparent 5px
-  );
+  background-image: -webkit-repeating-linear-gradient(top, #fff, #fff 1px, transparent 1px, transparent 5px);
+  background-image: repeating-linear-gradient(to bottom, #fff, #fff 1px, transparent 1px, transparent 5px);
 }
 
-@include vp-anim(7px,pho);
-@include vp-anim(9px,dem);
+@-webkit-keyframes rot-pho {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-7px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translatey(-7px) rotate(-360deg);
+  }
+}
+@-keyframes rot-pho {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-7px) rotate(0deg);
+            transform: rotate(0deg) translatey(-7px) rotate(0deg);
+  }
 
+  to {
+    -webkit-transform: rotate(360deg) translatey(-7px) rotate(-360deg);
+            transform: rotate(360deg) translatey(-7px) rotate(-360deg);
+  }
+}
+@-webkit-keyframes rot-dem {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-9px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translatey(-9px) rotate(-360deg);
+  }
+}
+@-keyframes rot-dem {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-9px) rotate(0deg);
+            transform: rotate(0deg) translatey(-9px) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translatey(-9px) rotate(-360deg);
+            transform: rotate(360deg) translatey(-9px) rotate(-360deg);
+  }
+}
 .pho, .dem {
-  width:1px;
-  height:1px;
+  width: 1px;
+  height: 1px;
   background-color: #fff;
-  position:absolute;
+  position: absolute;
   top: 50%;
-  left:50%;
+  left: 50%;
 }
 
 .pho {
-  $phoOrb: 1.5s * $baseUnit;  // Should be 0.33s but spins like it's having a fit.
-  margin:-1px;
-  -webkit-animation: rot-pho $phoOrb infinite linear;
-  -moz-animation: rot-pho $phoOrb infinite linear;
-  animation: rot-pho $phoOrb infinite linear;
+  margin: -1px;
+  -webkit-animation: rot-pho 0.15s infinite linear;
+  animation: rot-pho 0.15s infinite linear;
 }
 
 .dem {
-  $demOrb: 2s * $baseUnit;  // Should be 1.25s, spins too fast
-  margin:-1px;
-  -webkit-animation: rot-dem $demOrb infinite linear;
-  -moz-animation: rot-dem $demOrb infinite linear;
-  animation: rot-dem $demOrb infinite linear;
+  margin: -1px;
+  -webkit-animation: rot-dem 0.2s infinite linear;
+  animation: rot-dem 0.2s infinite linear;
 }
 
-$jupR: 35px;
 .jove {
-  width:2px;
-  height:2px;
+  width: 2px;
+  height: 2px;
   background-color: #fff;
-  position:absolute;
-  top: $jupR;
-  left:50%;
+  position: absolute;
+  top: 35px;
+  left: 50%;
 }
 
+@-webkit-keyframes rot-io {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-39px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translatey(-39px) rotate(-360deg);
+  }
+}
+@-keyframes rot-io {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-39px) rotate(0deg);
+            transform: rotate(0deg) translatey(-39px) rotate(0deg);
+  }
 
-@include vp-anim($jupR + 4px,io);
-@include vp-anim($jupR + 6px,eur);
-@include vp-anim($jupR + 10px,gan);
-@include vp-anim($jupR + 18px,cal);
+  to {
+    -webkit-transform: rotate(360deg) translatey(-39px) rotate(-360deg);
+            transform: rotate(360deg) translatey(-39px) rotate(-360deg);
+  }
+}
+@-webkit-keyframes rot-eur {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-41px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translatey(-41px) rotate(-360deg);
+  }
+}
+@-keyframes rot-eur {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-41px) rotate(0deg);
+            transform: rotate(0deg) translatey(-41px) rotate(0deg);
+  }
 
+  to {
+    -webkit-transform: rotate(360deg) translatey(-41px) rotate(-360deg);
+            transform: rotate(360deg) translatey(-41px) rotate(-360deg);
+  }
+}
+@-webkit-keyframes rot-gan {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-45px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translatey(-45px) rotate(-360deg);
+  }
+}
+@-keyframes rot-gan {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-45px) rotate(0deg);
+            transform: rotate(0deg) translatey(-45px) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translatey(-45px) rotate(-360deg);
+            transform: rotate(360deg) translatey(-45px) rotate(-360deg);
+  }
+}
+@-webkit-keyframes rot-cal {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-53px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translatey(-53px) rotate(-360deg);
+  }
+}
+@-keyframes rot-cal {
+  from {
+    -webkit-transform: rotate(0deg) translatey(-53px) rotate(0deg);
+            transform: rotate(0deg) translatey(-53px) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translatey(-53px) rotate(-360deg);
+            transform: rotate(360deg) translatey(-53px) rotate(-360deg);
+  }
+}
 .io {
-  $jioOrb: 2s*$baseUnit;
-  -webkit-animation: rot-io $jioOrb infinite linear;
-  -moz-animation: rot-io $jioOrb infinite linear;
-  animation: rot-io $jioOrb infinite linear;
+  -webkit-animation: rot-io 0.2s infinite linear;
+  animation: rot-io 0.2s infinite linear;
 }
 
 .eur {
-  $jeurOrb: 3.5s*$baseUnit;
-  -webkit-animation: rot-eur $jeurOrb infinite linear;
-  -moz-animation: rot-eur $jeurOrb infinite linear;
-  animation: rot-eur $jeurOrb infinite linear;
+  -webkit-animation: rot-eur 0.35s infinite linear;
+  animation: rot-eur 0.35s infinite linear;
 }
 
 .gan {
-  $jganOrb: 7s*$baseUnit;
-  -webkit-animation: rot-gan $jganOrb infinite linear;
-  -moz-animation: rot-gan $jganOrb infinite linear;
-  animation: rot-gan $jganOrb infinite linear;
+  -webkit-animation: rot-gan 0.7s infinite linear;
+  animation: rot-gan 0.7s infinite linear;
 }
 
 .cal {
-  $jcalOrb: 16.5s*$baseUnit;
-  -webkit-animation: rot-cal $jcalOrb infinite linear;
-  -moz-animation: rot-cal $jcalOrb infinite linear;
-  animation: rot-cal $jcalOrb infinite linear;
+  -webkit-animation: rot-cal 1.65s infinite linear;
+  animation: rot-cal 1.65s infinite linear;
 }
 
 .jup {
-  background-image: repeating-linear-gradient(
-    6deg,
-    #797663 22px,
-    #e1dcde 16px,
-    #c3a992 30px,
-    #e9ece2 30px
-  );
+  background-image: -webkit-repeating-linear-gradient(84deg, #797663 22px, #e1dcde 16px, #c3a992 30px, #e9ece2 30px);
+  background-image: repeating-linear-gradient(6deg, #797663 22px, #e1dcde 16px, #c3a992 30px, #e9ece2 30px);
 }
 
 .spot {
-  position:absolute;
-  width:16px;height:12px;
+  position: absolute;
+  width: 16px;
+  height: 12px;
   border-radius: 8px / 6px;
-  top: $jupR+10;
-  left:50%;
-  background-color:#bc833b;
+  top: 45px;
+  left: 50%;
+  background-color: #bc833b;
   box-shadow: 0px 0px 5px #e1dcde;
-  border:solid 1px #e1dcde;
-  box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  -webkit-box-sizing:border-box;
-  z-index:300;
-  .nep & {
-    background-color:darken(#343ec5, 10%);
-    border: 0;
-    box-shadow: none;
-    top: 50%;
-    left:45%;
-    width: 10px;
-    height: 6px;
-    margin: -2px;
-    border-radius: 5px / 3px;
-    border-left:solid 1px #7ed6fe;
-  }
+  border: solid 1px #e1dcde;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  z-index: 300;
+}
+.nep .spot {
+  background-color: #29319d;
+  border: 0;
+  box-shadow: none;
+  top: 50%;
+  left: 45%;
+  width: 10px;
+  height: 6px;
+  margin: -2px;
+  border-radius: 5px / 3px;
+  border-left: solid 1px #7ed6fe;
 }
 
-$satD: 29px * 2;
 div[class$="-ring"] {
   border-radius: 50%;
-  position:absolute;
+  position: absolute;
   top: 50%;
-  left:50%;
+  left: 50%;
   opacity: 0.7;
-  $tilt: 45deg;
-  -webkit-transform: rotatex($tilt);
-  -moz-transform: rotatex($tilt);
-  transform: rotatex($tilt);
+  -webkit-transform: rotatex(45deg);
+  transform: rotatex(45deg);
 }
 
 .a-ring {
-  $ringD: $satD + 61;
-  $ringW: 5px;
-  border:solid $ringW #96866f;
-  width: $ringD;
-  height: $ringD;
-  margin: -($ringD / 2) - $ringW;
+  border: solid 5px #96866f;
+  width: 119px;
+  height: 119px;
+  margin: -64.5px;
 }
+
 .b-ring {
-  $ringD: $satD + 46;
-  $ringW: 10px;
-  border:solid $ringW #554c3c;
-  width: $ringD;
-  height: $ringD;
-  margin: -($ringD / 2) - $ringW;
+  border: solid 10px #554c3c;
+  width: 104px;
+  height: 104px;
+  margin: -62px;
 }
 
 .c-ring {
-  $ringD: $satD + 37;
-  $ringW: 9px;
-  border:solid $ringW #574f4a;
-  width: $ringD;
-  height: $ringD;
-  margin: -($ringD / 2) - $ringW;
+  border: solid 9px #574f4a;
+  width: 95px;
+  height: 95px;
+  margin: -56.5px;
 }
 
 .f-ring {
-  $ringD: $satD + 75;
-  $ringW: 2px;
-  border:solid $ringW #908e8d;
-  width: $ringD;
-  height: $ringD;
-  margin: -($ringD / 2) - $ringW;
+  border: solid 2px #908e8d;
+  width: 133px;
+  height: 133px;
+  margin: -68.5px;
 }
 
-$uraD: 13px * 2;
 .e-ring {
-  $ringD: $uraD + 50;
-  $ringW: 7px;
-  border:solid $ringW #908e8d;
-  width: $ringD;
-  height: $ringD;
-  margin: -($ringD / 2) - $ringW;
-  $tilt: 0deg;
-  $axis: 89deg;
-  -webkit-transform: rotatex($tilt) rotatey($axis) !important;
-  -moz-transform: rotatex($tilt) rotatey($axis) !important;
-  transform: rotatex($tilt) rotatey($axis) !important;
+  border: solid 7px #908e8d;
+  width: 76px;
+  height: 76px;
+  margin: -45px;
+  -webkit-transform: rotatex(0deg) rotatey(89deg) !important;
+  transform: rotatex(0deg) rotatey(89deg) !important;
 }
 
 .plu, .plu-path {
-  top: $middle + 287.4px;
+  top: 1354.06667px;
 }
 </style>
+
 <div class="system">
   <div class="sun"></div>
   <div class="mer-path"></div>
