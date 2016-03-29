@@ -1,1 +1,275 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="http://www.iconj.com/ico/2/7/27ko5ihwhs.ico" type="image/x-icon" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <link href="carousel.css" rel="stylesheet">
+  
+  <title>Steven Jin</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="//static.miniclipcdn.com/js/game-embed.js"></script>
+  <style>
+  
+ 
+
+  .carousel-caption {
+    top: 120px;
+    bottom: auto;
+  }
+  
+  .btn{
+
+	background: transparent;
+	color: #F2F2F2;
+
+	/* CSS Transition */
+	-webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-ms-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-o-transition: background .2s ease-in-out, border .2s ease-in-out;
+	transition: background .2s ease-in-out, border .2s ease-in-out;
+
+}
+    .navbar { margin-bottom:0px;}
+    
+    .carousel-inner{
+    width:100%;
+    max-height: 500px !important;
+    }
+     .carousel .item img {
+    width: 100%; /*img width*/
+}
+
+
+
+/* changing the navbar to transparent */
+.navbar {
+  background-color: transparent;
+  background: transparent;
+  border: none;
+  color: black;
+  z-index: 100;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* Adjusting the brand and link colors */
+
+.navbar-default .navbar-brand {
+  color: white;
+  font-weight: 500;
+}
+.navbar-default .navbar-brand:hover {
+  color: white;
+}
+.navbar-default .navbar-nav > li > a {
+  color: black;
+  font-weight: 500;
+  font-size: 1em;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:active {
+  color: black;
+  text-decoration: underline;
+}
+.navbar-default .navbar-nav > li > a:visited, .navbar-default .navbar-nav > li > a:focus {
+  color: black;
+  text-decoration: none;
+}
+/* opaque class which will be attached on scroll */
+
+.navbar.opaque {
+  background-color: white;
+  background: white;
+  transition: background-color 1s ease 0s; /* Transition effect to make it fade in (optional) */
+  box-shadow: 0px 0px 4px #969696;
+}
+.navbar.opaque .navbar-brand {
+  color: #969696;
+  transition: color 1s ease 0s;
+}
+.navbar.opaque .navbar-nav > li > a {
+  color: #969696;
+  transition: color 1s ease 0s;
+}
+.navbar.opaque .navbar-nav > li > a:active {
+  text-decoration: underline;
+}
+
+#footer {
+    min-height: 150px;
+    background: url(http://rudymaxasworld.com/wp-content/themes/bones/library/images/white_footer.png) 50% 50%;
+    background-size: 100% 100%;
+    margin-top:50px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+#footer a {
+  color:#ffffff;
+}
+  </style>
+  
+  <script>
+  
+  $(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+  
+    (function(){
+    $(window).scroll(function() {
+    
+        // check if window scroll for more than 430px. May vary
+        // as per the height of your main banner.
+        
+        if($(this).scrollTop() > 435) { 
+            $('.navbar').addClass('opaque'); // adding the opaque class
+        } else {
+            $('.navbar').removeClass('opaque'); // removing the opaque class
+        }
+    });
+  })();
+  
+  function fadeIn(obj) {
+    $(obj).fadeIn(1000);
+}
+var bar = $('.value-bar');
+$(function(){
+  $(bar).each(function(){
+    bar_width = $(this).attr('aria-valuenow');
+    $(this).width(bar_width + '%');
+  });
+});
+  </script>
+</head>
+<body>
+  
+  
+
+<!--The Nav Bar-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+       <a class="navbar-brand" rel="home">
+        <img style="max-width:50px; margin-top: -7px;"
+             src="http://i.imgur.com/w7EeGAQ.png">
+    </a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://stevezease.github.io/">Home</a></li>
+        <li><a href="http://stevezease.github.io/resume.html">Resume</a></li>
+        <li><a>About Me</a></li>
+        <li><a href="#">CIS351</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<br><br><br><br><br><br><br><br>
+
+
+<h1 style="margin-right: 150px; margin-left: 150px;">Due 3/29： Unit 2:  <img src = "https://cdn1.iconfinder.com/data/icons/logotypes/32/square-facebook-512.png" height="35" width="35">inal</h1>
+<p style="margin-right: 150px; margin-left: 150px;"><small>posted 11:52 PM Monday, March 28th, 2016 (EST)</small></p>
+<p style="margin-right: 150px; margin-left: 150px;">
+  <br><br> 	In my long paper, I argued that despite popular stigmas introverts are actually the more frequent user of social media. My primary audience were people who are introverted. I chose this audience because I felt that often in modern society being introverted often has a negative connotation attached to it. Too often in our society, being introverted is synonymous with being socially awkward, overly quiet and anti social. As a result, many people might feel ashamed or embarrassed to actually be introverted. I wrote this paper also to also raise awareness that being introverted is in no way a bad thing. In fact, half of our population is introverted. I aimed in the paper to make the reader understand that  being introverted is normal. As an introvert myself I tried to relate with the reader so that he or she feel more accustomed and accepting of being an introvert. Furthermore, through this paper, to the general audience I wanted to also help spread the message that being introverted doesn’t necessarily means what society thinks it does. Particularly I wanted to make people rethink through my main point that introverts actually use social media more than extroverts. By opening my audiences eyes to new information, I wanted to make my them reflect and review some of the negative stereotypes that society has on our everyday life. 
+<br><br> 	In regards to my topic in modern era. I feel like society is slowly moving towards a more introverted dominated direction. In particular, we see that today many public settings consists of people looking at their phones. We see that many romantic dates have also been reduced to looking at their screens. I can’t help but reminisce of the scene from Wall-E in which the people of the future are confined to chair and their entire life revolves around the screens attached to their chairs. Although it seems bizarre now, we already see signs that we are making steps toward that directions. These days we see that many of us are too reliant on technology. If we ask our neighbor what are two things they would bring with them to a stranded island most would probably say a laptop and a wifi connection. We also see that many are oblivious to how to socially interact without our cellphones. Using the internet has become a routine part of our lives and it is a bad scenario to be in as sooner or later we will find ourselves unable to detach from technology. I strongly believe that as time progresses more and more people will be come aware of the communication deficit that have been occurring and more movements will take place to act against it.
+<br><br> 	In terms of sources, I feel that many of my sources could have been more concrete. I had one source that came from a study from a university, however I felt that the article did a poor job elaborating on the exact details of the study. The article never gave precise numbers or charts regarding the results form the study. All the information was qualitative. I felt if I had concrete numbers many of my claims would have been more convincing. For the rest of my sources, most of them are articles from pretty small article sites. Many of them were personal opinions and lacked authority in that they didn’t come from scholarly sources and research. When I was looking for sources, I also found some sources that disagreed with my thesis. I think this was the case because there weren’t too many sources that I had to choose from when it came to introversion and social media. I think If I looked more into scholarly articles I would have had better information and data to work with. I did primarily research in terms of my own survey. I felt that my results aligned with my argument however I could've used more a more varied sample as well as more samples. All in all because of the limited amount of sources I could find regarding my topic, I lacked a good deal of primary sources and the validity of the rest of my sources were questionable.
+<br><br> 	When I was working on my pitch, to be honest, I was a bit oblivious to how my pitch should've been structured. I tried to direct my pitch homework to a more general audience. My pitch was a powerpoint and I tried to format to reflect what I learned from my presentation course. I tried to minimize the amount of text that I used. All my information for the pitch was from my research questions. I presented my idea to a couple of friends who kind of took it with a grain of salt. Because they didn’t seem to enthralled I didn’t take much of an initiative following up. 
+</p>
+<!-- begin wwww.htmlcommentbox.com -->
+ <div id="HCB_comment_box" style="margin:50px;"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
+ <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16862&num=10&ts=1454621664721");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->
+
+<footer>
+<div id="footer" class="">
+    <div class="container">
+       <center>
+       	<h3>Let's Stay In Touch!</h3>
+       </center>
+       
+      <div class="row">
+    <div class="col-md-3">
+        <center>
+     
+      <img src="http://iconshow.me/media/images/Mixed/Free-Flat-UI-Icons/png/256/mail-24-256.png"  width="120" height="90" data-toggle="modal" data-target="#myModal"> 
+
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Send Me a Message</h4>
+        </div>
+        <div class="modal-body">
+     
+<script type="text/javascript" src="https://form.jotform.com/jsform/60214395391151"></script>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+
+
+
+       </center>
+    </div>
+    
+    <div class="col-md-3"> 
+     <center>
+     	<a title="Reach me by phone" data-toggle="popover" data-placement="top" data-content="Mobile: 917-515-0615">
+          <img src="http://www.clker.com/cliparts/0/f/c/2/1195445181899094722molumen_phone_icon.svg.hi.png" width="100" height="100"> 
+        </a>  
+     </center>
+       
+    </div>
+    <div class="col-md-3"> 
+     <center>  
+     <a href="https://www.facebook.com/TheWorldIsGoingJinsane">
+    <img src="http://uxrepo.com/static/icon-sets/brandico/svg/facebook-rect.svg" alt="HTML"width="100" height="100"> 
+      </a>
+      </center>
+    </div>
+    
+     <div class="col-md-3"> 
+     <center>  
+     	<a title="Add me on League!" data-toggle="popover" data-placement="top" data-content="NA LoL: MasterYiJin">
+    <img src="http://uxrepo.com/static/icon-sets/ionicons/svg/game-controller-b.svg" alt="HTML"width="120" height="120"> 
+       </a>  
+      </center>
+    </div>
+    
+  </div>   
+       
+    </div>
+    <center>
+    <a><img src="http://www.reliablecounter.com/count.php?page=stevezease.github.io/&digit=style/plain/6/&reloads=0" alt="" title="" border="0"></a>
+    </center>
+</div>
+</footer>
+
+</body>
+</html>
