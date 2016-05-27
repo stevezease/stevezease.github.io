@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Steven Jin</title>
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+	<link rel="shortcut icon" href="res/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="style/animations.css">
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+
+	
+</head>
+<body>
+	<div class="main">
+		<ul>
+			<li style="float:right"><a  href="#Products"><span class='line_wrap'><span class='line'></span>PRODUCTS</span></a></li>
+			<li style="float:right"><a href="#about"><span class='line_wrap'><span class='line'></span>ABOUT</span></a></li>
+			<li style="float:right"><a href="#home"><span class='line_wrap'><span class='line'></span>HOME</span></a></li>
+			<li><a class="logo"><img src="res/logoGrey.png" height ="45px" width="75px" ></a></img></li>
+		</ul>
+<div class="row">
+	
+			<div class="column column-7">
+	
+			<div class="inside">
+
+				<img src="res/Fadein.png" height="220px"> </img>
+				<br><br><br>
+			
+<a class="ghost-button" href="#" style="margin-left: 100px;">Learn More</a>
+
+			</div>
+</div>
+
+<div class="column column-5">
+<img class="top" src="res/apple.png" height="370px"> </img>
+</div>
+</div>
+		<center>
+			<div id="bottomImage">
+				<div id="cf">
+					<a href = "#">
+						<img class="bottom"  src="res/down2.png" height="50px" width="50p"></img>
+
+						<img class="top" src="res/down.png" height="50px" width="50px"></img>
+					</a>
+
+				</div>
+			</div>
+		</center>
+
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="column column-6">
+				<center>
+
+					<img class="pixs" src="res/jazzbass.png" height="85%" width="85%"></img>
+
+				</center>
+
+			</div>
+			<div class="column column-6"> 
+			    <br><br>
+				<h1>Chips, Scatches or Dents?</h1>
+				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "</p>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="container" style="background-color: #F2F2F2;">
+		<div class="row">
+		<center><h1>Meet the Team</h1></center>
+			<div class="column column-4">
+				<center>
+
+				<img src="placeholder.png" height ="175px" width="175px" style="margin-top: 15px;">
+				<h3> This could be you! </h3>
+
+				</center>
+
+			</div>
+			<div class="column column-4"> 
+			<center>
+				<img src="placeholder.png" height ="175px" width="175px" style="margin-top: 15px;">
+				<h3> This could be you! </h3>
+				</center>
+
+			</div>
+			<div class="column column-4"> 
+			<center>
+				<img src="placeholder.png" height ="175px" width="175px" style="margin-top: 15px;">
+				<h3> This could be you! </h3>
+				</center>
+			</div>
+			<br><br>
+		</div>
+			<br><br>
+	</div>
+
+<div class="container" style="background-color: #DEDEDE;">
+		<div class="row">
+			<div class="column column-3">
+				<center>
+
+				<img src="res/logoGrey.png" height ="45px" width="75px" style="margin-top: 15px;">
+
+				</center>
+
+			</div>
+			<div class="column column-3"> 
+				<h3>Products</h3>
+				<pre>Product 1</pre>
+
+			</div>
+			<div class="column column-3"> 
+				<h3>Company</h3>
+				<pre>About</pre>
+				<pre>Careers</pre>
+				<pre>Contact Us</pre>
+				<pre>The Team</pre>
+			</div>
+			<div class="column column-3"> 
+				<h3>Follow Us</h3>
+				<pre>Facebook</pre>
+				<pre>Instagram</pre>
+				<pre>Twitter</pre>
+				<pre>SnapChat</pre>
+			</div>
+			<br><br>
+		</div>
+			<br><br>
+	</div>
+
+	<script>
+		$(window).scroll(function() {
+			$('.pixs').each(function(){
+				var imagePos = $(this).offset().top;
+				var topOfWindow = $(window).scrollTop();
+				if (imagePos < topOfWindow+400) {
+					$(this).removeClass("pixs").addClass("slideUp");
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>

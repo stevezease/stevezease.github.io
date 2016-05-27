@@ -1,0 +1,284 @@
+
+body {
+  font-family: 'Open Sans';
+  margin: 0px;
+  padding: 0px;
+}
+
+/*Used From http://sixrevisions.com/css/ghost-buttons/*/
+.ghost-button{
+  font-family: 'Open Sans';
+  display: inline-block;
+  width: 200px;
+  padding: 8px;
+  color: #454545;
+  border: 2px solid #454545;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+}
+.ghost-button:hover,
+.ghost-button:active {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.main{
+  margin: 0px;
+  padding: 0px;
+  background-color: #fff7ba;
+  width: 100%;
+  height: 100vh;
+}
+
+.container{
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+    margin: 0px;
+}
+
+/* Nav Bar*/
+/*Start*/
+ul {
+  font-size: 14px;
+  font-family: Verdana;
+  text-transform: uppercase;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(255,255,255,0.1);
+
+}
+
+li {
+  float: left;
+
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: #454545;
+  text-align: center;
+  padding: 28px 32px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+
+}
+
+.logo {
+  margin: 0px;
+  padding: 0px;
+  margin-left: 14px;
+  margin-top: 14px;
+
+}
+/*Underline*/
+span.line_wrap {
+  position:relative;
+  display:inline-block;        
+}
+span.line {
+  display:inline-block;
+  position:absolute;
+  left:0;
+  top:99%;
+  width:0;
+  border-top:2px solid crimson;
+  -webkit-transition: width 0.3s ease-in;
+}
+span.line_wrap:hover span.line {
+  width:110%;    
+}
+
+#bottomImage { position: absolute; bottom: 30px; 
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1000px}
+
+.inside{
+  margin-left: 50px;
+}
+
+/*fading images*/
+#cf {
+  position:relative;
+  height:30px;
+  width:30px;
+  margin:0 auto;
+
+}
+
+#cf img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+
+}
+
+#cf img.top:hover {
+  opacity:0;
+}
+
+/*------------------------------*\
+    Grid System
+\*------------------------------*/
+
+.row, 
+.column {
+ padding-top: 30px;
+    box-sizing: border-box;
+}
+
+.row:before,
+.row:after {
+    content: " ";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+.column {
+    position: relative;
+    float: left;
+    display: block;
+}
+
+.column + .column {
+    margin-left: 1.2%;
+}
+
+.column-1 {
+    width: 6.86666666667%;
+}
+
+.column-2 {
+    width: 15.3333333333%;
+}
+
+.column-3 {
+    width: 23.8%;
+}
+
+.column-4 {
+    width: 32.2666666667%;
+}
+
+.column-5 {
+    width: 40.7333333333%;
+}
+
+.column-6 {
+    width: 49.2%;
+}
+
+.column-7 {
+    width: 57.6666666667%;
+}
+
+.column-8 {
+    width: 66.1333333333%;
+}
+
+.column-9 {
+    width: 74.6%;
+}
+
+.column-10 {
+    width: 83.0666666667%;
+}
+
+.column-11 {
+    width: 91.5333333333%;
+}
+
+.column-12 {
+    width: 100%;
+    margin-left: 0;
+}
+
+@media only screen and (max-width: 550px) {
+    .column-1, 
+    .column-2, 
+    .column-3, 
+    .column-4, 
+    .column-5, 
+    .column-6, 
+    .column-7, 
+    .column-8, 
+    .column-9, 
+    .column-10, 
+    .column-11, 
+    .column-12 {
+        float: none;
+        width: auto;
+    }
+  
+    .column + .column {
+        margin-left: 0;
+    }
+}
+
+.pixs { visibility: hidden;}
+
+
+
+h1 {
+  font-family: 'Open Sans';
+  font-size: 48px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  line-height:40px;
+}
+h3 {
+  font-family: 'Open Sans';
+  font-size: 17px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 23px;
+}
+p {
+  font-family: 'Open Sans';
+  font-size: 25px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 100;
+  line-height: 30px;
+  color:#BBBBBB;
+  margin-right: 30px;
+}
+blockquote {
+  font-family: 'Open Sans';
+  font-size: 17px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 23px;
+}
+pre {
+  font-family: 'Open Sans';
+  font-size: 11px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 120;
+  line-height: 23px;
+   color:#454545;
+}
