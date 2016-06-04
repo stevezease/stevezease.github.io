@@ -9,7 +9,7 @@ img {
     height: auto;
     width: auto\9; /* ie8 */
 }
-
+a {text-decoration: none; }
 /*Used From http://sixrevisions.com/css/ghost-buttons/*/
 .ghost-button{
   font-family: 'Open Sans';
@@ -145,8 +145,10 @@ span.line_wrap:hover span.line {
 
 .row, 
 .column {
- padding-top: 30px;
+  
+ padding-top: 15px;
     box-sizing: border-box;
+
 }
 
 .row:before,
