@@ -30,6 +30,25 @@ a {text-decoration: none; }
   border: 2px solid #000;
 }
 
+.ghost-buttonx{
+  font-family: 'Open Sans';
+  display: inline-block;
+  width: 200px;
+  padding: 8px;
+  color: #ffffff;
+  border: 4px solid #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+}
+.ghost-buttonx:hover,
+.ghost-buttonx:active {
+  background-color: #454545;
+  color: #000;
+  border: 4px solid #ffffff;
+}
+
 .main{
   margin: 0px;
   padding: 0px;
@@ -253,6 +272,14 @@ h1 {
   font-variant: normal;
   font-weight: 300;
   line-height:40px;
+}
+h2 {
+  font-family: 'Open Sans';
+  font-size: 96px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 200;
+  line-height:0px;
 }
 h3 {
   font-family: 'Open Sans';
