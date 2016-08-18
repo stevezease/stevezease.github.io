@@ -16,8 +16,8 @@ a {text-decoration: none; }
   display: inline-block;
   width: 200px;
   padding: 8px;
-  color: #454545;
-  border: 2px solid #454545;
+  color: #ffffff;
+  border: 2px solid #ffffff;
   border-radius: 5px;
   text-align: center;
   outline: none;
@@ -25,9 +25,9 @@ a {text-decoration: none; }
 }
 .ghost-button:hover,
 .ghost-button:active {
-  background-color: #fff;
-  color: #000;
-  border: 2px solid #000;
+  background-color: #454545;
+  color: #ffffff;
+  border: 2px solid #ffffff;
 }
 
 .ghost-buttonx{
@@ -49,19 +49,49 @@ a {text-decoration: none; }
   border: 4px solid #ffffff;
 }
 
-.main{
-  margin: 0px;
-  padding: 0px;
-  background-color: #fff7ba;
-  width: 100%;
-  height: 100vh;
+.ghost-buttonlong{
+  font-family: 'Open Sans';
+  display: inline-block;
+  width: 85%;
+  color: #ffffff;
+  border: 4px solid #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+}
+.ghost-buttonlong:hover,
+.ghost-buttonlong:active {
+  background-color: #454545;
+  color: #000;
+  border: 4px solid #ffffff;
 }
 
+.main{
+
+  margin: 0px;
+  padding: 0px;
+
+  width: 100%;
+  height: 100vh;
+
+}
+
+#buycontainer {
+     margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+    margin: 0px;
+    transition: background 2s linear;
+    -webkit-transition: background 2s linear;
+    -moz-transition: background 2s linear;
+}
 .container{
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 0px;
     margin: 0px;
+
 }
 
 /* Nav Bar*/
@@ -89,7 +119,7 @@ li:last-child {
 
 li a {
   display: block;
-  color: #454545;
+  color: #ffffff;
   text-align: center;
   padding: 28px 32px;
   text-decoration: none;
@@ -165,7 +195,6 @@ span.line_wrap:hover span.line {
 .row, 
 .column {
   
- padding-top: 15px;
     box-sizing: border-box;
 
 }
