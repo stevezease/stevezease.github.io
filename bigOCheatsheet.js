@@ -57,6 +57,7 @@ Array.from(document.getElementsByTagName('code')).forEach(code => {
     	code.className= color;
     } else {
     	isCorrect(false);
+	code.className = "";
     }
 }
 	code.appendChild(dropdown);
