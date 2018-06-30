@@ -46,6 +46,7 @@ Array.from(document.getElementsByTagName('code')).forEach(code => {
 	addOption(dropdown, '1');
 	addOption(dropdown, 'n');
 	addOption(dropdown, 'log(n)');
+	addOption(dropdown, 'n log(n)');
 	addOption(dropdown, 'N/A');
 	addOption(dropdown, 'n^2');
 	addOption(dropdown, 'n+k');
