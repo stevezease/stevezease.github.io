@@ -406,16 +406,16 @@
      }
      let dropdown = document.createElement("select");
      addOption(dropdown, '');
+     addOption(dropdown, 'N/A');
      addOption(dropdown, '1');
      addOption(dropdown, 'n');
-     addOption(dropdown, 'log(n)');
-     addOption(dropdown, 'n(log(n))^2');
-     addOption(dropdown, 'nk');
-     addOption(dropdown, 'k');
-     addOption(dropdown, 'n log(n)');
-     addOption(dropdown, 'N/A');
      addOption(dropdown, 'n^2');
+     addOption(dropdown, 'log(n)');
+     addOption(dropdown, 'n log(n)');
+     addOption(dropdown, 'n(log(n))^2');
+     addOption(dropdown, 'k');
      addOption(dropdown, 'n+k');
+     addOption(dropdown, 'nk');
      dropdown.onchange = function(){
       let selectedString = dropdown.options[dropdown.selectedIndex].value;
       let selectedAnswer = selectedString === "N/A" ? "N/A" : header + selectedString + ")"
